@@ -5,6 +5,8 @@ import {createServerActionClient} from '@supabase/auth-helpers-nextjs'
 import { revalidatePath } from 'next/cache'
 import { redirect } from "next/navigation";
 
+
+
 export async function addTicket(formData) {
   const ticket = Object.fromEntries(formData)
 
