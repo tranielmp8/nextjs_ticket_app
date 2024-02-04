@@ -7,7 +7,8 @@ import { redirect } from "next/navigation"
 
 export default async function AuthLayout({children}) {
 
-  const supabase = createServerComponentClient({cookies})
+  const cookieStore = cookies()
+  const supabase = createServerComponentClient({ cookies: () => cookieStore })
   const {data} = await supabase.auth.getSession();
 
   if(data.session) {

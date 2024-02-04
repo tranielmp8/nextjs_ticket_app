@@ -6,7 +6,8 @@ import DeleteButton from "./DeleteButton";
 export const dynamicParams = true;
 
 export async function generateMetadata({params}){
-  const supabase = createServerComponentClient({cookies})
+  const cookieStore = cookies()
+  const supabase = createServerComponentClient({ cookies: () => cookieStore })
 
   const {data: ticket} = await supabase.from('tickets')
   .select()
