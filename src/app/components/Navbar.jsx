@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from './dojo-logo.png' // name it what you want we named it Logo
+import Logo from '@/../public/images/requests.png' // name it what you want we named it Logo
 import LogoutButton from './LogoutButton'
 
 export default function Navbar({ user }) {
@@ -13,7 +13,7 @@ export default function Navbar({ user }) {
         quality={100}
         placeholder='blur'
       />
-      <h1>Dojo Helpdesk</h1>
+      <h1>TicketMaster</h1>
       <Link href="/" >Dashboard</Link>
       <Link className='mr-auto' href="/tickets" >Tickets</Link>
 
