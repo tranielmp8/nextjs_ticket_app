@@ -17,7 +17,7 @@ export default function Navbar({ user }) {
       <Link href="/" >Dashboard</Link>
       <Link className='mr-auto' href="/tickets" >Tickets</Link>
 
-      {user && <span>Hello, {user.email}</span>}
+      {user && <span>Hello,  {user.email}</span>}
       <LogoutButton />
     </nav>
   )
